@@ -22,7 +22,7 @@
         <input type="submit" value="Soumettre"/>
     </form>
         <?php
-            
+            file_put_contents("file.json",json_encode($_POST,JSON_PRETTY_PRINT));
         ?>
 </body>
 </html>
