@@ -16,7 +16,7 @@
             <option value="burger">Burger</option>
             <option value="ramen">Ramen</option>
             <option value="pizza">Pizza</option>
-        </select><br>
+        </select><br/>
         <label for="color">Couleur:</label>
         <input type="color" name="color"/><br>
         <input type="submit" value="Soumettre"/>
