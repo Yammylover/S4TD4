@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body{
+            background-color: <?php echo $_POST["color"]?>;
+            font-size: <?php echo $_POST["number"] ?>px;
+        }
+    </style>
     <fieldset>
         <style> fieldset{ border: 5px solid black}</style>
     <form action="ex5.php" method="POST">
@@ -14,6 +20,12 @@
         <br/>
         <label for="name"> Votre prénom: </label>
         <input type="text" name="last_name">
+        <br/>
+        <label for="color"> Votre couleur préférée: </label>
+        <input type="color" name="color" value='<?php echo $_POST["color"]?>'>
+        <br/>
+        <label for="number"> Votre taille de police préférée: </label>
+        <input type="number" name="number" value='<?php echo $_POST["number"]?>'>
         <br/>
         <br/>
         <input type="submit">
@@ -31,6 +43,7 @@
             if($_POST["last_name"]){//merci à Maxime pour sa contribution booléenne
                 echo $_POST["last_name"];
             }
+            echo " qui aime ".$_POST["color"];
         }
     ?>
 </body>
